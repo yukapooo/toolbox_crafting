@@ -3,7 +3,6 @@
 
 # Frameworks
 - [qbx_core](https://github.com/Qbox-project/qbx_core)
-- [qb_core](https://github.com/qbcore-framework/qb-core)
 
 # Dependencies
 - [oxmysql](https://github.com/overextended/oxmysql)
