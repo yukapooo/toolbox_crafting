@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toolbox Crafting</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="app">
+    <div class="sidebar">
+        <div class="logo">
+            <span>ツールボックス</span>
+        </div>
+        <div class="search-container">
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="アイテム検索..."
+            >
+        </div>
+        <div id="recipeList"></div>
+    </div>
+    <div class="content">
+        <div class="header">
+            <div class="header-left">
+                <img
+                    id="itemImage"
+                    src=""
+                    alt="item"
+                >
+                <div>
+                    <h1 id="recipeTitle">
+                        アイテム名
+                    </h1>
+                    <p id="recipeOutput">
+                        作成数: x1
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="info">
+            <div class="amount-section">
+                <label>
+                    作成数量
+                </label>
+                <div class="amount-controls">
+                    <button id="minusBtn">
+                        -
+                    </button>
+                    <input
+                        id="amountInput"
+                        type="number"
+                        value="1"
+                        min="1"
+                    >
+                    <button id="plusBtn">
+                        +
+                    </button>
+                </div>
+                <div id="maxCraftable">
+                    最大作成可能数: 0
+                </div>
+            </div>
+            <div class="section">
+                <h2>
+                    必要素材
+                </h2>
+                <div id="ingredients"></div>
+            </div>
+            <div class="actions">
+                <button id="craftBtn">
+                    🔨 作成
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
