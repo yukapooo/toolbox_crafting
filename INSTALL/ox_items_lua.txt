@@ -1,0 +1,11 @@
+--toolbox
+['toolbox'] = {
+	label = 'ツールボックス',
+	weight = 1000,
+	stack = false,
+	close = true,
+	client = {
+		event = 'toolbox_crafting:open',
+		image = "toolbox.png"
+	}
+},
