@@ -15,7 +15,7 @@
 - `server.cfg` に追加してください
 - `INSTALL`フォルダにox_inventory用コードと画像がありますので追加してください
 
-# functions
+# Functions
 - ox_inventory画像対応
 - 数量指定クラフト
 - クラフトアニメーション
@@ -24,7 +24,7 @@
 - 最大作成可能数表示
 - 検索機能
 
-# recipes
+# Recipes
 - `shared/recipes.lua`にクラフト内容（使用素材、クラフト所要時間）の設定ができます
 - アイテム追加可能
 ```lua
