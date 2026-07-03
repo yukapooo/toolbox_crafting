@@ -1,0 +1,6 @@
+html/* linguist-vendored
+web/* linguist-vendored
+ui/* linguist-vendored
+*.js linguist-vendored
+*.css linguist-vendored
+*.html linguist-vendored
