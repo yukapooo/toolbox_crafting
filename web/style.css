@@ -336,6 +336,17 @@ body {
     transform: translateY(0);
 }
 
+#craftBtn:disabled {
+    background: #374151;
+    opacity: .6;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+#craftBtn:disabled:hover {
+    transform: none;
+}
+
 @keyframes pulseGlow {
 
     0% {
