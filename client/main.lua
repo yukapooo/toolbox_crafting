@@ -1,4 +1,7 @@
 local isOpen = false
+local currentRecipes = {}
+local currentTitle = 'ツールボックス'
+local currentTheme = 'basic'
 
 local function OpenCrafting()
     if isOpen then return end
@@ -13,9 +16,11 @@ local function OpenCrafting()
     SetNuiFocusKeepInput(false)
     SendNUIMessage({
         action = 'open',
-        recipes = Recipes,
+        recipes = currentRecipes,
         inventory = inventory,
-        labels = labels
+        labels = labels,
+        toolboxTitle = currentTitle,
+        toolboxTheme = currentTheme
     })
 end
 
@@ -28,7 +33,28 @@ local function CloseCrafting()
     })
 end
 
-RegisterNetEvent('toolbox_crafting:open', function()
+-- ベーシックツールボックス
+RegisterNetEvent('toolbox_crafting:openBasic', function()
+    currentCategory = 'basic'
+    currentRecipes = Recipes.basic
+    currentTitle = 'ツールボックス'
+    currentTheme = 'basic'
+    OpenCrafting()
+end)
+-- 犯罪関係ツールボックス
+RegisterNetEvent('toolbox_crafting:openRobbery', function()
+    currentCategory = 'robbery'
+    currentRecipes = Recipes.robbery
+    currentTitle = '犯罪関係ツールボックス'
+    currentTheme = 'robbery'
+    OpenCrafting()
+end)
+-- 医療ツールボックス
+RegisterNetEvent('toolbox_crafting:openMedical', function()
+    currentCategory = 'medical'
+    currentRecipes = Recipes.medical
+    currentTitle = '医療ツールボックス'
+    currentTheme = 'medical'
     OpenCrafting()
 end)
 
@@ -77,14 +103,15 @@ RegisterNUICallback('craft', function(data, cb)
         TriggerServerEvent(
             'toolbox_crafting:craft',
             recipeId,
-            amount
+            amount,
+            currentCategory
         )
     end
     cb('ok')
 end)
 
 RegisterNUICallback('getRecipes', function(_, cb)
-    cb(Recipes)
+    cb(currentRecipes)
 end)
 
 RegisterNetEvent('toolbox_crafting:notify', function(data)
@@ -103,8 +130,11 @@ RegisterNetEvent('toolbox_crafting:refresh', function()
     ) or {}
     SendNUIMessage({
         action = 'refresh',
-        recipes = Recipes,
-        inventory = inventory
+        recipes = currentRecipes,
+        inventory = inventory,
+        labels = labels,
+        toolboxTitle = currentTitle,
+        toolboxTheme = currentTheme
     })
 end)
 

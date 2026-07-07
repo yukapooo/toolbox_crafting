@@ -2,7 +2,7 @@ fx_version 'cerulean'
 game 'gta5'
 author 'Yukapo Original'
 description 'QBox craft toolbox'
-version '1.0.0'
+version '1.0.2'
 
 lua54 'yes'
 

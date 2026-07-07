@@ -1,22 +1,37 @@
+-- ツールボックスの種類を追加する場合、client/main.luaのlocal currentRecipes = {}下よりの部分にコード追加
 Recipes = {
-    {
-        label = 'ロックピック',
-        item = 'lockpick',
-        amount = 1,
-        craftTime = 5000,
-        category = 'tools',
-        ingredients = {
-            iron = 1
-        }
+    basic = {
+        {
+            label = 'スケートボード',
+            item = 'skateboard_01',
+            amount = 1,
+            craftTime = 5000,
+            ingredients = {
+                iron = 1,
+                plastic = 1
+            }
+        },
     },
-    -- {
-    --     label = '包帯',
-    --     item = 'bandage',
-    --     amount = 5,
-    --     craftTime = 4000,
-    --     category = 'medical',
-    --     ingredients = {
-    --         cloth = 2
-    --     }
-    -- },
+    robbery = {
+        {
+            label = 'ロックピック',
+            item = 'lockpick',
+            amount = 1,
+            craftTime = 5000,
+            ingredients = {
+                iron = 1
+            }
+        },
+    },
+    medical = {
+        {
+            label = '包帯',
+            item = 'bandage',
+            amount = 1,
+            craftTime = 5000,
+            ingredients = {
+                cloth = 2
+            }
+        },
+    }
 }

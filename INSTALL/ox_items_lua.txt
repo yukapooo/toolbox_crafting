@@ -5,7 +5,27 @@
 	stack = false,
 	close = true,
 	client = {
-		event = 'toolbox_crafting:open',
+		event = 'toolbox_crafting:openBasic',
 		image = "toolbox.png"
 	}
+},
+['toolbox_robbery'] = {
+    label = '犯罪関係ツールボックス',
+	weight = 1000,
+	stack = false,
+	close = true,
+    client = {
+        event = 'toolbox_crafting:openRobbery',
+		image = "toolbox_robbery.png"
+    }
+},
+['toolbox_medical'] = {
+    label = '医療ツールボックス',
+	weight = 1000,
+	stack = false,
+	close = true,
+    client = {
+        event = 'toolbox_crafting:openMedical',
+		image = "toolbox_medical.png"
+    }
 },

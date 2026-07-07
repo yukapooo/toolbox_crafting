@@ -20,6 +20,8 @@ const plusBtn = document.getElementById('plusBtn');
 const maxCraftable = document.getElementById('maxCraftable');
 
 const searchInput = document.getElementById('searchInput');
+const toolboxTitle = document.getElementById('toolboxTitle');
+const app = document.getElementById('app');
 
 window.addEventListener('message', function(event) {
     const data = event.data;
@@ -29,6 +31,10 @@ window.addEventListener('message', function(event) {
             recipes = data.recipes || [];
             inventory = data.inventory || {};
             labels = data.labels || {};
+            toolboxTitle.textContent = data.toolboxTitle || 'ツールボックス';
+            toolboxTitle.textContent =
+            data.toolboxTitle || 'ツールボックス';
+            app.className = `theme-${data.toolboxTheme || 'basic'}`;
             loadRecipes();
             break;
         case 'close':
@@ -38,6 +44,8 @@ window.addEventListener('message', function(event) {
             recipes = data.recipes || [];
             inventory = data.inventory || {};
             labels = data.labels || labels;
+            toolboxTitle.textContent = data.toolboxTitle || toolboxTitle.textContent;
+            app.className = `theme-${data.toolboxTheme || 'basic'}`;
             loadRecipes();
             break;
         case 'inventory':

@@ -368,3 +368,81 @@ body {
 .recipe.active {
     animation: pulseGlow 2s infinite;
 }
+
+.theme-basic .logo {
+    background: linear-gradient(
+        90deg,
+        #450a0a,
+        #991b1b
+    );
+}
+
+.theme-basic .recipe.active,
+.theme-basic .recipe:hover {
+    background: #dc2626;
+}
+
+.theme-basic #craftBtn {
+    background: linear-gradient(
+        90deg,
+        #dc2626,
+        #ef4444
+    );
+}
+
+.theme-basic .section h2 {
+    color: #f87171;
+}
+
+.theme-robbery .logo {
+    background: linear-gradient(
+        90deg,
+        #78350f,
+        #ca8a04
+    );
+}
+
+.theme-robbery .recipe.active,
+.theme-robbery .recipe:hover {
+    background: #eab308;
+    color: black;
+}
+
+.theme-robbery #craftBtn {
+    background: linear-gradient(
+        90deg,
+        #eab308,
+        #facc15
+    );
+
+    color: black;
+}
+
+.theme-robbery .section h2 {
+    color: #fde047;
+}
+
+.theme-medical .logo {
+    background: linear-gradient(
+        90deg,
+        #0c4a6e,
+        #2563eb
+    );
+}
+
+.theme-medical .recipe.active,
+.theme-medical .recipe:hover {
+    background: #2563eb;
+}
+
+.theme-medical #craftBtn {
+    background: linear-gradient(
+        90deg,
+        #2563eb,
+        #3b82f6
+    );
+}
+
+.theme-medical .section h2 {
+    color: #60a5fa;
+}

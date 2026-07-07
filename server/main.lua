@@ -15,10 +15,14 @@ lib.callback.register('toolbox_crafting:getInventory', function(source)
     }
 end)
 
-RegisterNetEvent('toolbox_crafting:craft', function(recipeId, craftAmount)
+RegisterNetEvent('toolbox_crafting:craft', function(recipeId, craftAmount, category)
     local src = source
-    local recipe = Recipes[recipeId]
-
+    local recipe = Recipes[category] and Recipes[category][recipeId]
+    if not recipe then
+        print(('[toolbox_crafting] recipe not found category=%s id=%s')
+            :format(category, recipeId))
+        return
+    end
     if not recipe then
         return
     end
