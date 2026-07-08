@@ -1,5 +1,5 @@
 # toolbox_crafting
-- アイテムによるクラフトスクリプト
+- アイテムを使用して、どこでもクラフトできるスクリプト
 
 # Frameworks
 - [qbx_core](https://github.com/Qbox-project/qbx_core)
