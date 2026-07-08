@@ -10,7 +10,7 @@
 - [ox_inventory](https://github.com/overextended/ox_inventory)
 
 # Installation
-- 必要な依存リソース（ox_lib、ox_inventory、qbx_core など）を導入し、`toolbox_crafting` より先に起動してください。
+- 必要な依存リソースを導入し、`toolbox_crafting` より先に起動してください。
 - `toolbox_crafting` フォルダをサーバーの `resources` フォルダへ配置してください。
 - `server.cfg` に追加してください
 - `INSTALL`フォルダにox_inventory用コードと画像がありますので追加してください
